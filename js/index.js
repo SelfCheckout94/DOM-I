@@ -47,7 +47,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // nav bar
-const links = document.querySelectorAll("nav a");
+const links = document.querySelectorAll("header nav a");
 const linksArray = Array.from(links);
 linksArray[0].textContent = "Services";
 linksArray[1].textContent = "Product";
@@ -55,6 +55,13 @@ linksArray[2].textContent = "Vision";
 linksArray[3].textContent = "Features";
 linksArray[4].textContent = "About";
 linksArray[5].textContent = "Contact";
+
+linksArray[0].style.color = "green";
+linksArray[1].style.color = "green";
+linksArray[2].style.color = "green";
+linksArray[3].style.color = "green";
+linksArray[4].style.color = "green";
+linksArray[5].style.color = "green";
 
 // header
 const h1 = document.querySelector("h1");
@@ -108,3 +115,16 @@ contactArrayP[2].textContent = "sales@greatidea.io";
 
 const footer = document.querySelector("footer p");
 footer.textContent = "Copyright Great Idea! 2018";
+
+// new nav items
+
+const endNav = document.createElement("a");
+endNav.text = "PB&J";
+endNav.href = "#";
+document.querySelector("nav").appendChild(endNav);
+
+const frontNav = document.createElement("a");
+endNav.text = "The Meaning of Life";
+endNav.href = "#";
+document.querySelector("nav").prepend(frontNav);
+frontNav.style.color = "green";
