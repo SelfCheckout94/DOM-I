@@ -56,6 +56,7 @@ linksArray[3].textContent = "Features";
 linksArray[4].textContent = "About";
 linksArray[5].textContent = "Contact";
 
+// nav styles
 linksArray[0].style.color = "green";
 linksArray[1].style.color = "green";
 linksArray[2].style.color = "green";
@@ -121,10 +122,12 @@ footer.textContent = "Copyright Great Idea! 2018";
 const endNav = document.createElement("a");
 endNav.text = "PB&J";
 endNav.href = "#";
-document.querySelector("nav").appendChild(endNav);
+endNav.style.color = "green";
 
-const frontNav = document.createElement("a");
+const frontNav = endNav.cloneNode(true);
 endNav.text = "The Meaning of Life";
 endNav.href = "#";
-document.querySelector("nav").prepend(frontNav);
 frontNav.style.color = "green";
+
+document.querySelector("nav").prepend(frontNav);
+document.querySelector("nav").appendChild(endNav);
